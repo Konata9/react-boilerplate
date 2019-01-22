@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CleanWebPackPlugin = require("clean-webpack-plugin");
 
 const path = require("path");
-const rules = require("./webpack.rules");
+const loaders = require("./webpack.loaders");
 
 module.exports = {
   entry: {
@@ -13,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, "../dist")
   },
   module: {
-    rules: rules
+    rules: loaders
   },
   plugins: [
     new HtmlWebPackPlugin({
