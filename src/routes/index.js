@@ -7,7 +7,7 @@ import Hello from "./../components/Hello";
 export default () => {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={Home} />} />
       <Route path="/hello" exact component={Hello} />
     </Switch>
   );

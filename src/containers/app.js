@@ -7,9 +7,12 @@ class App extends Component {
     const { children } = this.props;
 
     return (
-      <div>
+      <div className="content-wrapper">
+        <div className="avatar">
+          <img src="./../assets/avatar.png" alt="kizunaai" />
+        </div>
         <nav>
-          <ul>
+          <ul className="link-list">
             <li>
               <Link to="/">Home</Link>
             </li>
