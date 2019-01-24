@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { hot } from "react-hot-loader/root";
 
+import avatar from "./../assets/avatar.png";
+
 class App extends Component {
   render() {
     const { children } = this.props;
@@ -9,7 +11,7 @@ class App extends Component {
     return (
       <div className="content-wrapper">
         <div className="avatar">
-          <img src="./../assets/avatar.png" alt="kizunaai" />
+          <img src={avatar} alt="kizunaai" />
         </div>
         <nav>
           <ul className="link-list">
