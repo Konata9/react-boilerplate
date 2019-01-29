@@ -8,6 +8,7 @@ module.exports = merge(common, {
     port: 2233,
     hot: true,
     inline: true,
-    open: true
+    open: true,
+    historyApiFallback: true
   }
 });

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { hot } from "react-hot-loader/root";
 
 import avatar from "./../assets/avatar.png";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     const { children } = this.props;
 
@@ -21,6 +20,14 @@ class App extends Component {
             <li>
               <Link to="/hello">To Hello</Link>
             </li>
+            <li>
+              <Link to="/display">To Display</Link>
+            </li>
+            <li>
+              <Link to="/display" target="_blank">
+                To Dis
+              </Link>
+            </li>
           </ul>
         </nav>
         {children}
@@ -28,5 +35,3 @@ class App extends Component {
     );
   }
 }
-
-export default hot(App);
