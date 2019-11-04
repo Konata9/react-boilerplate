@@ -1,9 +1,12 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import * as ReactDOM from "react-dom";
+import { BrowserRouter } from 'react-router-dom'
 
-import { Hello } from './components/Hello'
+import Router from './Router'
 
 ReactDOM.render(
-	<Hello compiler="Typescript" framework="React" />,
+	<BrowserRouter>
+		<Router />
+	</BrowserRouter>,
 	document.getElementById('app')
 )
