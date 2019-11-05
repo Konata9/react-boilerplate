@@ -1,7 +1,37 @@
-import * as React from 'react'
+import * as React from "react"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
+import { helloGetAction } from "@src/reducers/Hello/actions"
 
-export interface HelloProps { compiler: string; framework: string }
+export interface HelloProps {
+  compiler: string
+  framework: string
+}
 
-export const Hello = (props: HelloProps) => (
-	<h1>Hello from {props.compiler} and {props.framework}</h1>
-)
+@(connect(
+  (state: any) => ({ helloProps: state.hello }),
+  dispatch =>
+    bindActionCreators(
+      {
+        getHello: helloGetAction()
+      },
+      dispatch
+    )
+) as any)
+class Hello extends React.PureComponent<any, any> {
+  componentDidMount() {
+    const { getHello } = this.props
+    getHello()
+  }
+
+  render() {
+    console.log(this.props)
+    return (
+      <h1>
+        Hello from {this.props.compiler} and {this.props.framework}
+      </h1>
+    )
+  }
+}
+
+export default Hello
