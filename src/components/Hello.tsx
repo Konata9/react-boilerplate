@@ -13,7 +13,7 @@ export interface HelloProps {
   dispatch =>
     bindActionCreators(
       {
-        getHello: helloGetAction()
+        getHello: helloGetAction
       },
       dispatch
     )
@@ -26,9 +26,10 @@ class Hello extends React.PureComponent<any, any> {
 
   render() {
     console.log(this.props)
+    const { helloProps } = this.props
     return (
       <h1>
-        Hello from {this.props.compiler} and {this.props.framework}
+        Hello from {helloProps.compiler} and {helloProps.framework}
       </h1>
     )
   }

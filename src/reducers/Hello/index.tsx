@@ -1,5 +1,5 @@
 import { getType } from "typesafe-actions"
-import { helloGetAction } from "./actions"
+import { helloGetAction, helloSetAction } from "./actions"
 
 export interface HelloState {
   compiler: string
@@ -16,7 +16,10 @@ export const helloReducer = (
   action: any
 ): HelloState => {
   switch (action.type) {
-    case getType(helloGetAction()):
+    case getType(helloGetAction):
+      return { ...state, ...action.payload }
+    case getType(helloSetAction):
+      console.log(action.payload)
       return { ...state, ...action.payload }
     default:
       return state
