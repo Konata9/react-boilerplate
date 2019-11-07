@@ -1,3 +1,5 @@
-import * as React from 'react'
+import * as React from "react"
 
-export const Demo = () => <div>Demo</div>
+const Demo = () => <div>Demo</div>
+
+export default Demo

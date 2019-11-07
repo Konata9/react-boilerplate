@@ -6,11 +6,13 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
+    "lib": ["es2015", "dom"],
     "target": "es5",
     "jsx": "react",
     "paths": {
       "@src/*": ["src/*"]
-    }
+    },
+    "types": ["react", "jest"]
   },
   "include": ["./src/**/*"]
 }
