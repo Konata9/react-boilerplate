@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Route, Switch } from "react-router"
 
-import Hello from "./components/Hello"
-import Demo from "./containers/Demo"
+import Hello from "./components/hello"
+import Demo from "./modules/demo"
 
 const Router = () => (
   <Switch>

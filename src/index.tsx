@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom"
 
 import reducers from "@src/reducers"
 import epics from "@src/epics"
-import Router from "./Router"
+import Router from "./router"
 
 declare global {
   interface Window {
