@@ -9,6 +9,10 @@
     "lint": "eslint src --ext .tsx --cache",
     "lint:fix": "eslint src --ext .tsx --cache --fix"
   },
+  "pre-commit": [
+    "lint",
+    "lint:fix"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Konata9/react-boilerplate.git"
@@ -38,7 +42,7 @@
     "html-webpack-plugin": "^3.2.0",
     "pre-commit": "^1.2.2",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.6.4",
+    "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"

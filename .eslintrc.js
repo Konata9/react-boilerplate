@@ -4,10 +4,8 @@ module.exports = {
     es6: true
   },
   extends: [
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:react/recommended",
-    "plugin:react-redux/recommended",
-    "eslint:recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   globals: {
     Atomics: "readonly",
@@ -18,9 +16,11 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     sourceType: "module"
   },
   plugins: ["@typescript-eslint", "react"],
-  rules: {}
+  rules: {
+    "@typescript-eslint/member-delimiter-style": 0
+  }
 }
