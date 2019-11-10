@@ -7,9 +7,11 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+  settings: {
+    react: {
+      pragma: "React",
+      version: "detect"
+    }
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
