@@ -5,7 +5,7 @@ import { helloGetAction, helloSetAction } from "@src/reducers/Hello/actions"
 
 const info = { compiler: 1, framework: 2 }
 
-const helloGetEpic = (action$: any, store: any) =>
+const helloGetEpic = (action$: any) =>
   action$.pipe(
     filter(isActionOf(helloGetAction)),
     switchMap(() =>
